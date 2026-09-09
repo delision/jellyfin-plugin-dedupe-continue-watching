@@ -4,7 +4,7 @@
 set -e
 
 PLUGIN_NAME="Jellyfin.Plugin.ContinueWatchingDedup"
-VERSION="1.0.0.0"
+VERSION="2.0.0.0"
 
 echo "🔨 Building $PLUGIN_NAME v$VERSION..."
 

@@ -6,8 +6,8 @@
 
 <p align="center">
   <a href="https://www.gnu.org/licenses/gpl-3.0"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License: GPL v3" /></a>
-  <a href="https://jellyfin.org"><img src="https://img.shields.io/badge/Jellyfin-10.10%2B-00A4DC.svg" alt="Jellyfin 10.10+" /></a>
-  <a href="https://dotnet.microsoft.com/"><img src="https://img.shields.io/badge/.NET-8.0-512BD4.svg" alt=".NET 8" /></a>
+  <a href="https://jellyfin.org"><img src="https://img.shields.io/badge/Jellyfin-12.0%2B-00A4DC.svg" alt="Jellyfin 12.0+" /></a>
+  <a href="https://dotnet.microsoft.com/"><img src="https://img.shields.io/badge/.NET-10.0-512BD4.svg" alt=".NET 10" /></a>
   <a href="https://github.com/SloMR/jellyfin-plugin-dedupe-continue-watching/releases"><img src="https://img.shields.io/github/v/release/SloMR/jellyfin-plugin-dedupe-continue-watching?include_prereleases&sort=semver" alt="Release" /></a>
   <a href="https://github.com/SloMR/jellyfin-plugin-dedupe-continue-watching/actions"><img src="https://img.shields.io/github/actions/workflow/status/SloMR/jellyfin-plugin-dedupe-continue-watching/release.yml" alt="Build" /></a>
 </p>
@@ -101,7 +101,7 @@ Non-200 responses, parse failures, and unknown encodings pass through unchanged.
 
 ## Building from Source
 
-Requires **.NET 8 SDK**.
+Requires **.NET 10 SDK**.
 
 ```bash
 git clone https://github.com/SloMR/jellyfin-plugin-dedupe-continue-watching.git
@@ -117,8 +117,8 @@ Tag a version (`v1.0.0.0`) and push — GitHub Actions builds the DLL, zips it, 
 
 ## Compatibility
 
-- Jellyfin **10.10.0** or newer
-- Target ABI: `10.10.0.0`
+- Jellyfin **12.0.0** or newer
+- Target ABI: `12.0.0.0`
 - All client platforms (server-side fix)
 
 ## Contributing
