@@ -6,13 +6,13 @@ The same `.dll` works on every Jellyfin server regardless of where you build it.
 
 ## Prerequisites (All OS)
 
-You need **.NET 8 SDK** installed.
+You need **.NET 10 SDK** installed.
 
 ### Linux (Ubuntu/Debian)
 
 ```bash
 sudo apt update
-sudo apt install -y dotnet-sdk-8.0
+sudo apt install -y dotnet-sdk-10.0
 ```
 
 ### Linux (Arch / Manjaro)
@@ -24,39 +24,39 @@ sudo pacman -S dotnet-sdk
 ### Linux (Fedora / RHEL)
 
 ```bash
-sudo dnf install dotnet-sdk-8.0
+sudo dnf install dotnet-sdk-10.0
 ```
 
 ### macOS
 
 **Option A — Homebrew (recommended):**
 ```bash
-brew install dotnet@8
+brew install dotnet@10
 ```
 
 **Option B — Official installer:**
-Download from https://dotnet.microsoft.com/download/dotnet/8.0 — pick the macOS installer matching your CPU (Intel `x64` or Apple Silicon `arm64`).
+Download from https://dotnet.microsoft.com/download/dotnet/10.0 — pick the macOS installer matching your CPU (Intel `x64` or Apple Silicon `arm64`).
 
 ### Windows
 
 **Option A — winget:**
 ```powershell
-winget install Microsoft.DotNet.SDK.8
+winget install Microsoft.DotNet.SDK.10
 ```
 
 **Option B — Official installer:**
-Download from https://dotnet.microsoft.com/download/dotnet/8.0 — pick "SDK" for x64.
+Download from https://dotnet.microsoft.com/download/dotnet/10.0 — pick "SDK" for x64.
 
 **Option C — Chocolatey:**
 ```powershell
-choco install dotnet-8.0-sdk
+choco install dotnet-10.0-sdk
 ```
 
 Verify with:
 ```bash
 dotnet --version
 ```
-Should print `8.0.x`.
+Should print `10.0.x`.
 
 ---
 
@@ -103,9 +103,9 @@ dist/Jellyfin.Plugin.ContinueWatchingDedup.dll
 
 ```bash
 sudo systemctl stop jellyfin
-sudo mkdir -p /var/lib/jellyfin/plugins/Jellyfin.Plugin.ContinueWatchingDedup_1.0.0.0
+sudo mkdir -p /var/lib/jellyfin/plugins/Jellyfin.Plugin.ContinueWatchingDedup_2.0.0.0
 sudo cp dist/Jellyfin.Plugin.ContinueWatchingDedup.dll \
-        /var/lib/jellyfin/plugins/Jellyfin.Plugin.ContinueWatchingDedup_1.0.0.0/
+        /var/lib/jellyfin/plugins/Jellyfin.Plugin.ContinueWatchingDedup_2.0.0.0/
 sudo chown -R jellyfin:jellyfin /var/lib/jellyfin/plugins/
 sudo systemctl start jellyfin
 ```
@@ -114,9 +114,9 @@ sudo systemctl start jellyfin
 
 ```bash
 docker stop jellyfin
-mkdir -p /your/jellyfin/config/plugins/Jellyfin.Plugin.ContinueWatchingDedup_1.0.0.0
+mkdir -p /your/jellyfin/config/plugins/Jellyfin.Plugin.ContinueWatchingDedup_2.0.0.0
 cp dist/Jellyfin.Plugin.ContinueWatchingDedup.dll \
-   /your/jellyfin/config/plugins/Jellyfin.Plugin.ContinueWatchingDedup_1.0.0.0/
+   /your/jellyfin/config/plugins/Jellyfin.Plugin.ContinueWatchingDedup_2.0.0.0/
 docker start jellyfin
 ```
 
@@ -127,9 +127,9 @@ docker start jellyfin
 osascript -e 'quit app "Jellyfin"'
 
 # Copy plugin
-mkdir -p ~/.local/share/jellyfin/plugins/Jellyfin.Plugin.ContinueWatchingDedup_1.0.0.0
+mkdir -p ~/.local/share/jellyfin/plugins/Jellyfin.Plugin.ContinueWatchingDedup_2.0.0.0
 cp dist/Jellyfin.Plugin.ContinueWatchingDedup.dll \
-   ~/.local/share/jellyfin/plugins/Jellyfin.Plugin.ContinueWatchingDedup_1.0.0.0/
+   ~/.local/share/jellyfin/plugins/Jellyfin.Plugin.ContinueWatchingDedup_2.0.0.0/
 
 # Restart Jellyfin
 open -a Jellyfin
@@ -142,7 +142,7 @@ open -a Jellyfin
 Stop-Service Jellyfin
 
 # Create plugin folder
-$pluginPath = "$env:ProgramData\Jellyfin\Server\plugins\Jellyfin.Plugin.ContinueWatchingDedup_1.0.0.0"
+$pluginPath = "$env:ProgramData\Jellyfin\Server\plugins\Jellyfin.Plugin.ContinueWatchingDedup_2.0.0.0"
 New-Item -ItemType Directory -Force -Path $pluginPath
 
 # Copy DLL
@@ -176,8 +176,8 @@ Start-Service Jellyfin
 ### "Plugin failed to load"
 
 Usually means a `.NET` version mismatch. Make sure:
-- You built with .NET 8 SDK
-- Your Jellyfin server is version **10.10.0 or newer**
+- You built with .NET 10 SDK
+- Your Jellyfin server is version **12.0.0 or newer**
 
 ### Build error: "Could not find package Jellyfin.Controller"
 

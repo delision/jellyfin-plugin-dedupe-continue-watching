@@ -21,7 +21,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 8.0.x
+          dotnet-version: 10.0.x
 
       - name: Determine version
         id: ver
@@ -96,7 +96,7 @@ jobs:
           entry["versions"].insert(0, {
               "version": version,
               "changelog": f"Release {tag}. See GitHub release notes.",
-              "targetAbi": "10.10.0.0",
+              "targetAbi": "12.0.0.0",
               "sourceUrl": f"https://github.com/{repo}/releases/download/{tag}/{zip_name}",
               "checksum": checksum,
               "timestamp": timestamp,
