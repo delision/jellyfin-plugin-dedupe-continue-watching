@@ -8,8 +8,8 @@
   <a href="https://www.gnu.org/licenses/gpl-3.0"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License: GPL v3" /></a>
   <a href="https://jellyfin.org"><img src="https://img.shields.io/badge/Jellyfin-12.0%2B-00A4DC.svg" alt="Jellyfin 12.0+" /></a>
   <a href="https://dotnet.microsoft.com/"><img src="https://img.shields.io/badge/.NET-10.0-512BD4.svg" alt=".NET 10" /></a>
-  <a href="https://github.com/SloMR/jellyfin-plugin-dedupe-continue-watching/releases"><img src="https://img.shields.io/github/v/release/SloMR/jellyfin-plugin-dedupe-continue-watching?include_prereleases&sort=semver" alt="Release" /></a>
-  <a href="https://github.com/SloMR/jellyfin-plugin-dedupe-continue-watching/actions"><img src="https://img.shields.io/github/actions/workflow/status/SloMR/jellyfin-plugin-dedupe-continue-watching/release.yml" alt="Build" /></a>
+  <a href="https://github.com/delision/jellyfin-plugin-dedupe-continue-watching/releases"><img src="https://img.shields.io/github/v/release/delision/jellyfin-plugin-dedupe-continue-watching?include_prereleases&sort=semver" alt="Release" /></a>
+  <a href="https://github.com/delision/jellyfin-plugin-dedupe-continue-watching/actions"><img src="https://img.shields.io/github/actions/workflow/status/delision/jellyfin-plugin-dedupe-continue-watching/release.yml" alt="Build" /></a>
 </p>
 
 A server-side Jellyfin plugin that deduplicates the **Continue Watching** row so each series appears only once — represented by the most recently played episode.
@@ -55,14 +55,14 @@ Jellyfin's native Continue Watching row shows **every episode with partial progr
 1. In Jellyfin: **Dashboard → Plugins → Repositories → +**
 2. Paste this URL:
    ```
-   https://raw.githubusercontent.com/SloMR/jellyfin-plugin-dedupe-continue-watching/main/manifest.json
+   https://raw.githubusercontent.com/delision/jellyfin-plugin-dedupe-continue-watching/main/manifest.json
    ```
 3. Go to **Plugins → Catalog**, find **Continue Watching Deduplicator**, install.
 4. Restart Jellyfin.
 
 ### Option 2 — Manual install
 
-1. Download the latest `.zip` from [Releases](https://github.com/SloMR/jellyfin-plugin-dedupe-continue-watching/releases).
+1. Download the latest `.zip` from [Releases](https://github.com/delision/jellyfin-plugin-dedupe-continue-watching/releases).
 2. Extract into your Jellyfin `plugins` directory:
    - **Linux:** `/var/lib/jellyfin/plugins/Jellyfin.Plugin.ContinueWatchingDedup_<version>/`
    - **Docker:** `/config/plugins/Jellyfin.Plugin.ContinueWatchingDedup_<version>/`
@@ -104,7 +104,7 @@ Non-200 responses, parse failures, and unknown encodings pass through unchanged.
 Requires **.NET 10 SDK**.
 
 ```bash
-git clone https://github.com/SloMR/jellyfin-plugin-dedupe-continue-watching.git
+git clone https://github.com/delision/jellyfin-plugin-dedupe-continue-watching.git
 cd jellyfin-plugin-dedupe-continue-watching
 dotnet publish Jellyfin.Plugin.ContinueWatchingDedup -c Release -o dist
 ```
@@ -131,4 +131,4 @@ Issues and PRs welcome. For larger changes, please open an issue first to discus
 
 ## Author
 
-Built by [@SloMR](https://github.com/SloMR).
+Built by [@SloMR](https://github.com/SloMR). Ported to Jellyfin 12.0 in this fork by [@delision](https://github.com/delision).

@@ -9,6 +9,6 @@ description: >
   Each series appears once — represented by the most recently played episode.
   Works on every Jellyfin client (Web, Android, iOS, Android TV, Roku, etc).
 category: "General"
-owner: "SloMR"
+owner: "delision"
 artifacts:
   - "Jellyfin.Plugin.ContinueWatchingDedup.dll"
